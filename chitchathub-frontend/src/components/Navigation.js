@@ -11,7 +11,7 @@ function Navigation() {
       <Container>
         <LinkContainer to="/">
         <Navbar.Brand>
-          <img src={logo} style={{width:100 , height:80}} alt="Image Loading..." />
+          <img src={logo} style={{width:100 , height:90}} alt="Image Loading..." />
         </Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
