@@ -1,24 +1,28 @@
-import React from 'react'
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import {LinkContainer} from 'react-router-bootstrap'
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import { LinkContainer } from "react-router-bootstrap";
+import logo from "../assets/logo.png"
 function Navigation() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <LinkContainer to="/">
+        <Navbar.Brand>
+          <img src={logo} style={{width:100 , height:80}} alt="Image Loading..." />
+        </Navbar.Brand>
+        </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="ms-auto">
             <LinkContainer to="/login">
-            <Nav.Link>Login</Nav.Link>
+              <Nav.Link>Login</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/chat">
-            <Nav.Link>Chat</Nav.Link>
+              <Nav.Link>Chat</Nav.Link>
             </LinkContainer>
-            <Nav.Link href="#link">Link</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -37,6 +41,4 @@ function Navigation() {
   );
 }
 
-
-
-export default Navigation
+export default Navigation;
